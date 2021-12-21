@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CRUD_MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/promo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/contato.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/destino.css" asp-append-version="true" />
+</head>
+<body>
+<header>
+        <nav>
+            <div class="nome_agencia">
+                <h1>Agencia</h1>
+            </div>
+            <div class="nav__lista--container">
+               <ul>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Destino">Destino</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Promo">Promoções</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+        
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <a href="https://github.com/monaracalado" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/monaracalado/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <p>&copy; 2021 Developed by <strong>Monara Calado</strong></p>
+        </div>
+        
+    </footer>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿@model CRUD_MVC.Models.Cliente;
+
+@{
+    ViewData["Title"] = "Destino";
+}
+
+<main>
+        <form asp-action="SolicitarViagem" class="form-destino">
+            <fieldset class="fieldset-destino">
+            <div>
+                <span>Cadastro de Viagem</span> 
+            </div>
+            
+            <div>
+                <p class="campo_obrigatorio"><h11>*</h11> Campo Obrigatório </p>
+            </div>
+            
+            <div>
+              <label for="nome">Nome <h11>*</h11></label> 
+              <input asp-for="Nome" class="input-destino" id="nome" name="nome" placeholder=" Nome Completo" required="" type="text"> 
+            </div>
+            <div class="cpf_bnt">
+                <div class="cpf_dtnc">
+                    <div>
+                        <label for="cpf">CPF <h11>*</h11></label>  
+                        <div>
+                            <input asp-for="CPF" class="input-destino" id="cpf" name="cpf" placeholder=" Apenas números" required="" type="text" maxlength="11" >
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="nascimento">Nascimento<h11>*</h11></label>  
+                        <div>
+                            <input asp-for="Nascimento" class="input-destino" id="nascimento" name="nascimento" placeholder=" DD/MM/AAAA"  required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="email_telefone">
+                    <div class="email_sexo">
+                        <div>
+                            <div>
+                                <label for="email">Email <h11>*</h11></label>
+                                <div>
+                                    <input asp-for="Email" class="input-destino" id="email" name="email" placeholder=" email@email.com" required="" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="radios">Sexo <h11>*</h11></label>
+                            <div> 
+                                <label required=""  for="radios-0" >
+                                <input asp-for="Sexo" class="input-destino" name="sexo" id="sexo" value="feminino" type="radio" required>
+                                Feminino</label> 
+                                <label for="radios-1">
+                                <input asp-for="Sexo" class="input-destino" name="sexo" id="sexo" value="masculino" type="radio">
+                                Masculino</label>
+                                <label for="radios-2">
+                                <input asp-for="Sexo" class="input-destino" name="sexo" id="sexo" value="outros" type="radio">
+                                Outros</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="telefone">
+                        <div>
+                            <label for="telefone1">Telefone <h11>*</h11></label>
+                            <div>
+                                <div>
+                                    <input asp-for="Telefone1" class="input-destino" id="telefone1" name="telefone1" placeholder=" XX XXXXX-XXXX" required="" type="text" maxlength="13"
+                                    OnKeyPress="formatar('## #####-####', this)">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="telefone2">Telefone</label>
+                            <div>
+                                <div>
+                                    <input asp-for="Telefone2" class="input-destino" id="telefone2" name="telefone2" placeholder=" XX XXXXX-XXXX" type="text" maxlength="13"
+                                    OnKeyPress="formatar('## #####-####', this)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+                <div>
+                    <div class="origem_destino">
+                        <div class="origem">
+                            <label for="selectbasic">Origem <h11>*</h11></label>
+                            
+                            <div >
+                                <select asp-for="Origem" required id="Origem" name="Origem">
+                                <option selected value="">-- Local de Origem</option>
+                                <option  value="Recife">Recife</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Fortaleza">Fortaleza</option>
+                                <option value="Salvador">Salvador</option>
+                                <option value="Manaus">Manaus</option>
+                                <option value="Natal">Natal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="destino">
+                            <label for="selectbasic">Destino <h11>*</h11></label>
+                            
+                            <div>
+                                <select asp-for="Destino" required id="destino" name="destino">
+                                <option selected value="">-- Local de Destino</option>
+                                <option value="Recife">Recife</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Fortaleza">Fortaleza</option>
+                                <option value="Salvador">Salvador</option>
+                                <option value="Manaus">Manaus</option>
+                                <option value="Natal">Natal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ida_volta">
+                        <div class="ida">
+                            <label for="ida">Ida<h11>*</h11></label>  
+                            <div >
+                                <input asp-for="DataIda" class="input-destino" id="ida" name="ida" placeholder=" DD/MM/AAAA" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+                            </div>
+                        </div>
+                        <div class="volta">
+                            <label for="volta">Volta<h11>*</h11></label>  
+                            <div >
+                                <input asp-for="DataVolta" class="input-destino" id="volta" name="volta" placeholder=" DD/MM/AAAA" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bnt_cadastrar">
+                        <label for="Cadastrar"></label>
+                        <div class="bnt">
+                            <button id="cadastrar" name="cadastrar" type="Submit" onsubmit="">Cadastrar</button>
+                            <button id="cancelar" name="cancelar" type="Reset">Cancelar</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+            </fieldset>
+        </form>
+    </main>

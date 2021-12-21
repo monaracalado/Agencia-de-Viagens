@@ -1,0 +1,53 @@
+﻿.cards {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.card-promo {
+    height: 360px;
+    margin-top:5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px;
+    color: #000;
+    background-color: rgba(226 179 255 / 70%);
+    transition: .3s all ease-in-out;
+}
+
+    .card-promo:hover {
+        transform: scale(1.03);
+    }
+
+    .card-promo > p {
+        padding-top: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+.img-promo {
+    max-width: 260px;
+    min-width: 140px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 30px;
+}
+
+.btns-promo {
+    margin-top: 25px;
+}
+
+.btn-promo {
+    border: none;
+    font-weight: bold;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    font-size: 15px;
+    color: darkmagenta;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+    .btn-promo:hover {
+        transform: scale(1.03);
+    }

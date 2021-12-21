@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Contato";
+}
+
+
+<section>
+            <div class="section-contato">
+                    <form class="form-contato">
+                        <div>
+                            <span>Envie seua menssagem</span> 
+                        </div>
+                        
+                        <div  class="input_contato">
+                        <input id="nome" name="nome" placeholder="   Digite seu nome" required="" type="text"> 
+                        </div>
+                        <div class="email_bnt">
+                            <div class="email_telefone">
+                                <div class="email">
+                                    <div class="input_contato">
+                                        <input id="email-contato" name="email" placeholder="   Digite seu email" required="" type="text">
+                                    </div>
+                                </div>
+                            
+                                <div class="telefone1">
+                                    <div class="input_contato">
+                                        <input id="telefone-contato" name="telefone" placeholder="   Digite seu telefone" required="" type="text" maxlength="13"
+                                        OnKeyPress="formatar('## #####-####', this)">
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="mensagem">
+                                <div>
+                                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder=" Informe o motivo do seu contato"></textarea>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bnt_enviar">
+                                    <label for="enviar"></label>
+                                    <div class="bnt-contato">
+                                        <button id="enviar" name="enviar" type="Submit" onsubmit="">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                <div class="img-contato">
+                    <img class="img_contato" src="../img/contato.jpg" alt="">
+                </div>
+                
+            </div>
+        </section>

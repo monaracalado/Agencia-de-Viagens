@@ -1,0 +1,96 @@
+﻿h11 {
+    color: red;
+}
+
+main > .form-destino {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
+    flex-wrap: wrap;
+}
+
+.fieldset-destino {
+    width: 42%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(228 235 255 / 84%);
+    box-shadow: 6px 6px 10px;
+    border: none;
+}
+
+div > span {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.campo_obrigatorio {
+    font-weight: bold;
+    text-align: end;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-destino, select {
+    border-radius: 10px 3px;
+    filter: drop-shadow(0px 0px 1.5px rgba(155, 154, 154, 0.5));
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+#nome {
+    width: 60%;
+}
+
+.cpf_bnt,
+.email_sexo > div,
+.telefone > div,
+.origem_destino > div,
+.ida_volta > div,
+.bnt {
+    margin-top: 10px;
+}
+
+#cpf,
+.email_sexo,
+.origem,
+.ida {
+    margin-right: 20px;
+}
+
+.cpf_dtnc,
+.email_telefone,
+.origem_destino,
+.ida_volta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#email {
+    width: 100%;
+}
+
+#cadastrar, #cancelar {
+    padding: 3px 5px;
+    border: 1px solid rgba(255,255,255,0.0);
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+    #cadastrar:hover, #cancelar:hover {
+        transform: scale(1.03);
+        font-weight: bold;
+    }
+
+#cadastrar {
+    background-color: rgb(66, 255, 66);
+}
+
+#cancelar {
+    background-color: rgb(255, 56, 56);
+}
